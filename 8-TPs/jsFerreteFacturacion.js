@@ -59,5 +59,5 @@ var PrecioFinaldos = PrecioDos*1.21;
 var PrecioFinaltres = PrecioTres*1.21;
 
 //por ultimo mostramos el resultado segun las caracteristicas pedidas
-alert("Precio Uno Final: $"+PrecioFinaluno+" / Precio Dos Final: $"+PrecioFinaldos+" / Precio Tres Final: $"+PrecioFinaltres);			
+alert("Precio Uno Final: $"+PrecioFinaluno+"\nPrecio Dos Final: $"+PrecioFinaldos+"\nPrecio Tres Final: $"+PrecioFinaltres);			
 }
