@@ -16,6 +16,7 @@ function CalcularPrecio ()
 	var descuento;
 	var preciofinal;
 	var precioFinalConDescuento
+	var percIIBB
 	costo=35;
 	marca=document.getElementById('Marca').value;
 	//alert(marca);
@@ -28,28 +29,72 @@ function CalcularPrecio ()
 	{
 		descuento=0.5;
 	}
+	else
+	{	
 
-	if(cantidad==5)
-	{
-		if(marca=="ArgentinaLuz")
+		if(cantidad==5)
 		{
-			descuento=0.6;
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=0.6;
+			}
+			else
+			{
+				descuento=0.7;
+			}
 		}
 		else
-		{
-			descuento=0.7;
+		{	
+
+			if(cantidad==4)
+			{
+				if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
+				{
+					descuento=0.75;
+				}
+				else
+				{
+					descuento=0.8;
+				}
+			}
+			else
+			{
+				if(cantidad==3)
+				{
+					if(marca=="ArgentinaLuz")
+					{
+						descuento=0.85;
+					}
+					else
+					{
+						if(marca=="FelipeLamparas")
+						{
+							descuento=0.9;
+						}
+						else
+						{
+							descuento=0.95;
+						}
+					}
+				}
+				else
+				{
+					descuento=1;
+				}
+			}
+
 		}
 	}
-
-	if(cantidad==4)
-	{
-		if
-	}
-
 
 
 	//alert(preciofinal)
 	
 	precioFinalConDescuento=preciofinal*descuento
-	alert(precioFinalConDescuento)
+	alert("$"+precioFinalConDescuento)
+
+	if (precioFinalConDescuento>120) 
+	{
+		percIIBB=precioFinalConDescuento*0.10;
+		alert("usted pago $"+ percIIBB+" de IIBB");
+	}
 }
