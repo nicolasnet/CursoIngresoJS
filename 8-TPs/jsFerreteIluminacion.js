@@ -25,6 +25,29 @@ function CalcularPrecio ()
 	
 	preciofinal=costo*cantidad;
 
+	switch(cantidad)	
+	{
+		case 5
+		if(marca=="ArgentinaLuz")
+			{
+				descuento=0.6;
+			}
+			else
+			{
+				descuento=0.7;
+			}
+		break;
+	}
+
+
+
+
+
+
+
+
+
+/*
 	if(cantidad>5)
 	{
 		descuento=0.5;
@@ -85,7 +108,7 @@ function CalcularPrecio ()
 
 		}
 	}
-
+*/
 
 	//alert(preciofinal)
 	
