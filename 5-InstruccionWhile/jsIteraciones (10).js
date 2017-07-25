@@ -1,6 +1,162 @@
 function Mostrar()
 {
+						//  EJERCICIO 10 DE WHILE
 
+
+	var numero;
+	var respuesta="si";
+
+	var contador=0;
+	
+	var acumuladorNegativos=0;
+	var acumuladorPositivos=0;
+	
+	var contadorNegativos=0;
+	var contadorPositivos=0;
+	var contadorCeros=0;
+	var contadorPares=0;
+	var contadorImpares=0;
+
+	var promedioNegativos=0;
+	var promedioPositivos=0;
+
+	var diferenciaEntrePositivosYNegativos=0;
+
+	var ventanaNueva;
+
+
+
+	while(respuesta!="no")
+	{
+		contador=contador+1;
+
+		numero=prompt("ingresar el "+contador+"º numero");
+		numero=Number(numero);
+
+		while(!(numero<1 || numero>0))
+		{
+			numero=prompt("por favor ingresar valor numerico");
+			numero=Number(numero);
+		}
+
+		
+
+
+
+		if(numero<0)
+		{
+			acumuladorNegativos=acumuladorNegativos+numero;
+			contadorNegativos=contadorNegativos+1;
+		}
+		else
+		{
+			if(numero==0)
+			{
+				contadorCeros=contadorCeros+1;
+			}
+			else
+			{
+				acumuladorPositivos=acumuladorPositivos+numero;
+				contadorPositivos=contadorPositivos+1;
+			}
+		}
+
+
+		 	//cantidad numeros pares
+
+		 if(numero%2 == 0)
+		 {
+		 	contadorPares=contadorPares+1;
+		 }
+		 else
+		 {
+		 	contadorImpares=contadorImpares+1;  //en caso de que tambien se pidan los impares  (si solo piden impares... if(numero%2 !=0) )
+		 }
+
+
+		 	//diferencia entre positivos y negativos
+		 diferenciaEntrePositivosYNegativos=diferenciaEntrePositivosYNegativos+numero;
+
+
+
+
+		respuesta=prompt("si no desea continuar escribir `no´");
+	}
+
+/*
+	console.log("suma nros. negativos: "+acumuladorNegativos);
+	console.log("suma nros. positivos: "+acumuladorPositivos);
+
+	console.log("cantidad de nros. negativos: "+contadorNegativos);
+	console.log("cantidad de nros. positivos: "+contadorPositivos);
+	console.log("cantidad de nros. Ceros: "+contadorCeros);
+	console.log("cantidad de nros. pares: "+contadorPares);
+
+	promedioNegativos=acumuladorNegativos/contadorNegativos;
+	console.log("promedio de nros. negativos: "+promedioNegativos);
+	promedioPositivos=acumuladorPositivos/contadorPositivos;
+	console.log("promedio de nros. positivos: "+promedioPositivos);
+
+	console.log("diferencia Entre Positivos Y Negativos: "+diferenciaEntrePositivosYNegativos);
+*/
+
+
+	ventanaNueva=window.open("","ventanaNueva", "width=400,height=300")
+
+	
+	ventanaNueva.document.writeln("suma nros. negativos: "+acumuladorNegativos);
+	ventanaNueva.document.writeln("suma nros. positivos: "+acumuladorPositivos);
+
+	ventanaNueva.document.writeln("cantidad de nros. negativos: "+contadorNegativos);
+	ventanaNueva.document.writeln("cantidad de nros. positivos: "+contadorPositivos);
+	ventanaNueva.document.writeln("cantidad de nros. Ceros: "+contadorCeros);
+	ventanaNueva.document.writeln("cantidad de nros. pares: "+contadorPares);
+
+	promedioNegativos=acumuladorNegativos/contadorNegativos;
+	ventanaNueva.document.writeln("promedio de nros. negativos: "+promedioNegativos);
+	promedioPositivos=acumuladorPositivos/contadorPositivos;
+	ventanaNueva.document.writeln("promedio de nros. positivos: "+promedioPositivos);
+
+	ventanaNueva.document.writeln("diferencia Entre Positivos Y Negativos: "+diferenciaEntrePositivosYNegativos);
+
+
+
+
+
+
+
+ //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+	/*						EJERCICIO MANDADO POR EL PROFESOR, PRACTICA INTEGRAL DE LOS TEMAS.
+
+			ejemplo de obtencion, validacion y extraccion de informacion, de esta encuesta se debe informar:
+				1- cuantas mujeres y cuantos hombres fueron entrevistados.
+				2- la persona de mayor edad.
+				3- el promedio de edad.
+				4- quien ganara las elecciones.
+				5- informar cuantas mujeres mayores de edad hay
+				6- informar cuantos hombres menores a 30 años hay
+				7- informar la altura del hombre que menos edad tiene
+				8- informar cuantos hombres votaron a "otro"
+				9- de las mujeres informar cuantas votaron a la op.
+				10- cuantas personas de 50 años votaron
+				11- cuantas personas de 50 años mujeres votaron
+				12- cuantas mujeres de 50 años de mas de 1 metro votaron al gobierno
+
+				//partidos opciones: gobierno; op.; otro
+	*/
+	
+/*
 	var contador=0;
 	//declarar contadores y variables 
 	
@@ -26,27 +182,7 @@ function Mostrar()
 	var altura;
 	var alturaHombreMenorEdad=0;
 	var contadorMujeres50añosMas1metroVotaronGobierno=0;
-	/*
-	ejemplo de obtencion, validacion y extraccion de informacion, de esta encuesta se debe informar:
-	1- cuantas mujeres y cuantos hombres fueron entrevistados.
-	2- la persona de mayor edad.
-	3- el promedio de edad.
-	4- quien ganara las elecciones.
-	5- informar cuantas mujeres mayores de edad hay
-	6- informar cuantos hombres menores a 30 años hay
-	7- informar la altura del hombre que menos edad tiene
-	8- informar cuantos hombres votaron a "otro"
-	9- de las mujeres informar cuantas votaron a la op.
-	10- cuantas personas de 50 años votaron
-	11- cuantas personas de 50 años mujeres votaron
-	12- cuantas mujeres de 50 años de mas de 1 metro votaron al gobierno
-	*/
-
-
-
-
-//partidos opciones gobierno; op.; otro
-
+	
 
 
 
@@ -209,7 +345,7 @@ function Mostrar()
 
 
 
-		respuesta = prompt("si no desea continuar ingresar `no´");
+		respuesta = prompt("si no desea continuar ingresar `no´, hasta ahora van "+contador+" encuestados cargados");
 	
 	}
 
@@ -261,11 +397,7 @@ function Mostrar()
 
 		console.log("cantidad de mujeres de 50 años con mas de 1 metro y que votaron al Gobierno: "+contadorMujeres50añosMas1metroVotaronGobierno);
 
-
-
-		
-
-
+*/
 
 
 
