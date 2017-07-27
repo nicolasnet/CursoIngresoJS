@@ -101,23 +101,24 @@ function Mostrar()
 */
 
 
+
 	ventanaNueva=window.open("","ventanaNueva", "width=400,height=300")
 
 	
-	ventanaNueva.document.writeln("suma nros. negativos: "+acumuladorNegativos);
-	ventanaNueva.document.writeln("suma nros. positivos: "+acumuladorPositivos);
+	ventanaNueva.document.writeln("suma nros. negativos: "+acumuladorNegativos );
+	ventanaNueva.document.writeln("</br>suma nros. positivos: "+acumuladorPositivos);
 
-	ventanaNueva.document.writeln("cantidad de nros. negativos: "+contadorNegativos);
-	ventanaNueva.document.writeln("cantidad de nros. positivos: "+contadorPositivos);
-	ventanaNueva.document.writeln("cantidad de nros. Ceros: "+contadorCeros);
-	ventanaNueva.document.writeln("cantidad de nros. pares: "+contadorPares);
+	ventanaNueva.document.writeln("</br>cantidad de nros. negativos: "+contadorNegativos);
+	ventanaNueva.document.writeln("</br>cantidad de nros. positivos: "+contadorPositivos);
+	ventanaNueva.document.writeln("</br>cantidad de nros. Ceros: "+contadorCeros);
+	ventanaNueva.document.writeln("</br>cantidad de nros. pares: "+contadorPares);
 
 	promedioNegativos=acumuladorNegativos/contadorNegativos;
-	ventanaNueva.document.writeln("promedio de nros. negativos: "+promedioNegativos);
+	ventanaNueva.document.writeln("</br>promedio de nros. negativos: "+promedioNegativos);
 	promedioPositivos=acumuladorPositivos/contadorPositivos;
-	ventanaNueva.document.writeln("promedio de nros. positivos: "+promedioPositivos);
+	ventanaNueva.document.writeln("</br>promedio de nros. positivos: "+promedioPositivos);
 
-	ventanaNueva.document.writeln("diferencia Entre Positivos Y Negativos: "+diferenciaEntrePositivosYNegativos);
+	ventanaNueva.document.writeln("</br>diferencia Entre Positivos Y Negativos: "+diferenciaEntrePositivosYNegativos);
 
 
 

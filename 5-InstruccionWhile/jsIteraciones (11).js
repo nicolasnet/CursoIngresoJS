@@ -30,7 +30,7 @@ function Mostrar()
 	alert("precio final del producto: "+precioFinal);
 */
 
-/*
+
 		//Nivel 1 ej. 3
 	var LargoTerreno;
 	var AnchoTerreno;
@@ -46,7 +46,7 @@ function Mostrar()
 	alambreNecesario=perimetro*3;
 
 	alert("el alambre necesario son: "+alambreNecesario+" mts.");
-*/
+
 	
 /*
 		//Nivel 2 ej. 4
