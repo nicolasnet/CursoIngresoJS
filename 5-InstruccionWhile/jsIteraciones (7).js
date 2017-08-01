@@ -1,6 +1,6 @@
 function Mostrar()
 {
-
+/*
 	var contador=0;
 	var acumulador=0;
 	var respuesta='si';
@@ -40,38 +40,41 @@ function Mostrar()
 	console.log("nota mayor "+notamayor);
 	console.log("nota menor "+notamenor);
 
+*/
 
 
 
 
-
-
-
-	//while(respuesta=="si")
-								/*while(contador<3)
+	var contador=0;
+	var numero;
+	var respuesta="si";
+	var acumulador=0;
+	while(respuesta=="si")
+	//while(contador<3)
 	{
 		contador=contador+1;
 		numero=prompt("ingrese el "+contador+"º numero");
 		numero=parseInt(numero);
 		acumulador=acumulador + numero;
-		console.log("vuelta Nro"+contador);*/
+		console.log("vuelta Nro"+contador);
+	
+									/*var contador=0;
+									while(true)
+									{
+										contador++;
+										console.log("vuelta Nro"+contador);     
+										if(contador==3)
+										{
+											break;
+										}
+									}*/	
+		respuesta=prompt(" ingrese si para continuar");
+		//respuesta=prompt(" ingrese algo distinto a si para salir"); //no queda claro para el usuario
+	}
 
 
-					/*while(true)
-						contador++;
-						console.log("vuelta Nro"+contador);      ESTE NO ESTA FUNCIONANDO... PROBLEMA EN EL BREAK
-						if(contador==3)
-						{
-						break;
-						}
 
-		//respuesta=prompt(" ingrese si para continuar");
-		//respuesta=prompt(" ingrese algo distinto a si para salir"); no queda claro para el usuario
-	}*/
-
-
-/*
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
-*/
+
 }//FIN DE LA FUNCIÓN
