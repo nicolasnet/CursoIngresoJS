@@ -7,13 +7,19 @@ function Mostrar()
     switch(mes)
     {
         case "diciembre":
-            alert("se vienen las fiestas");
+            alert("Se vienen las fiestas");
             break;
+
         case "enero":
-            alert("comienza el año");
+            alert("Comienza el año");
             break;
-         default:
-            alert("no es enero, ni diciembre");
-            break;
+
+        default:
+            alert("no es enero ni diciembre");
+            break;    
     }
+
+
+
+
 }

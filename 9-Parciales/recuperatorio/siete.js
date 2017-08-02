@@ -2,32 +2,30 @@ function Mostrar()
 {
 	var edad;
 	var sexo;
+	var cantidad=3;  //cambiar a 100 para este ejercicio
 	var contador=0;
-	var cantidad=5; //cambiar a 100 para el ejercicio
 	var acumuladorEdad=0;
 	var promedio;
 	var minimo;
-	var cantidadVaronesMayorIgual20=0;
-
+	var cantidadHombresMayorIgual20=0;
 
 	while(contador<cantidad)
 	{
-		contador++
+		contador++;
 
-		edad=prompt("ingresar edad de la "+contador+"º persona");
-		while(edad<0 || edad>100)
+		edad=prompt("ingresar edad de la "+contador+"° persona");
+		while(!(edad>0 && edad<100))
 		{
-			edad=prompt("ingresar edad valida");
+			edad=prompt("ingresar edad entre 0 y 100");
 		}
 		edad=Number(edad);
 
 
-		sexo=prompt("ingresar sexo f o m");
+		sexo=prompt("ingresar sexo f o m de la "+contador+"° persona");
 		while(sexo!="f" && sexo!="m")
 		{
-			sexo=prompt("ingresar unicamente f o m");
+			sexo=prompt("ingresar unicamente 'f' para femenino o 'm' para masculino");
 		}
-
 
 
 		acumuladorEdad=acumuladorEdad+edad;
@@ -42,22 +40,20 @@ function Mostrar()
 			if(edad<minimo)
 			{
 				minimo=edad;
-			}	
+			}
 		}
 
 
-
-		if(sexo=="m" && edad>19)
+		if(sexo="m" && edad>=20)
 		{
-			cantidadVaronesMayorIgual20++
+			cantidadHombresMayorIgual20++;
 		}
 	}
 
-
 	promedio=acumuladorEdad/contador;
-	alert("promedio= "+promedio+"\nla edad mas baja es: "+minimo+"\ncantidad de varones mayores o iguales a 20= "+cantidadVaronesMayorIgual20);
 
 
+	alert("el promedio de edad es: "+promedio+"\nla edad mas baja es: "+minimo+"\ncantidad de varones mayores o iguales a 20 años: "+cantidadHombresMayorIgual20);
 
 
 }

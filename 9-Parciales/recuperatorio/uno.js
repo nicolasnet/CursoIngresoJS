@@ -3,11 +3,13 @@ function Mostrar()
 {
     var laBase;
     var superficie;
-    
+
     laBase=document.getElementById('laBase').value;
-    laBase=parseInt(laBase);
-    
+    laBase=Number(laBase);
+
     superficie=laBase*laBase;
 
-    alert("la superficie es iguala: "+superficie);
+    alert("la superficie del cuadrado es: "+superficie);
+
+
 }

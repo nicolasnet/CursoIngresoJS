@@ -6,17 +6,20 @@ function Mostrar()
     var suma;
     var promedio;
 
-
     precioUno=document.getElementById('precioUno').value;
-    precioUno= Number(precioUno);
+    precioUno=Number(precioUno);
 
     precioDos=document.getElementById('precioDos').value;
-    precioDos= Number(precioDos);
+    precioDos=Number(precioDos);
 
     precioTres=document.getElementById('precioTres').value;
-    precioTres= Number(precioTres);
+    precioTres=Number(precioTres);
 
-    suma= precioUno+precioDos+precioTres;
+
+    suma=precioUno+precioDos+precioTres;
+
     promedio=suma/3;
-    alert("la suma es: "+suma+"\nel promedio es: "+promedio);
+
+    alert("la suma de los numeros es: "+suma+"\nel promedio es: "+promedio);
+
 }

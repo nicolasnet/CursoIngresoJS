@@ -4,40 +4,37 @@ function Mostrar()
 	var respuesta="si";
 	var contador=0;
 	var cantidadNumerosPares=0;
-	var acumuludorNumero=0;
+	var acumuladorNumeros=0;
 	var promedio;
-	var maximo;
 	var minimo;
-
+	var maximo;
 
 
 	while(respuesta!="no")
 	{
-		contador++
+		contador++;
 
-		numero=prompt("ingresar el "+contador+"º numero positivo");
-		while(numero<0)
+		numero=prompt("ingresar el "+contador+ "° numero positivo");
+		while(!(numero>=0))
 		{
-			numero=prompt("unicamente ingresar numeros positivos");
+			numero=prompt("ingrese unicamente numeros positivos");
 		}
 		numero=Number(numero);
 
 
+		acumuladorNumeros=acumuladorNumeros+numero;
+
+
 		if(numero%2==0)
 		{
-			cantidadNumerosPares++
+			cantidadNumerosPares++;
 		}
-
-
-
-		acumuludorNumero=acumuludorNumero+numero;
-
 
 
 		if(contador==1)
 		{
-			minimo=numero;
-			maximo=numero;
+			minimo=numero
+			maximo=numero
 		}
 		else
 		{
@@ -48,21 +45,19 @@ function Mostrar()
 
 			if(numero>maximo)
 			{
-				maximo=numero;
+				maximo=numero
 			}
 		}
 
-		respuesta=prompt("si no desea continuar ingrese `no´");
+
+		respuesta=prompt("si no desea continuar escriba 'no'");
 	}
 
+	promedio=acumuladorNumeros/contador;
 
-	document.write("cantidad de numeros pares= "+cantidadNumerosPares);
-
-	promedio=acumuludorNumero/contador;
-	document.write("</br>promedio de numeros= "+promedio);
-
-	document.write("</br>suma total de numeros= "+acumuludorNumero);
-
-	document.write("</br>numero maximo= "+ maximo);
-	document.write("</br>numero minimo= "+ minimo);
+	document.write("cantidad numeros pares: "+cantidadNumerosPares);
+	document.write("</br>promedio de todos los numeros "+promedio);
+	document.write("</br>suma total: "+acumuladorNumeros);
+	document.write("</br>numero maximo: "+maximo);
+	document.write("</br>numero minimo: "+minimo);
 }

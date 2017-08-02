@@ -1,24 +1,25 @@
 	function Mostrar()
 {
 	var peso;
-	var contador=0;
-	var cantidad=5; //cambiar a 50 para este ejercicio.
-	var maximo;
 	var minimo;
+	var maximo;
+	var cantidad=3;  //cambiar a 50 para este ejercicio.
+	var contador=0;
+
+
+
 
 
 	while(contador<cantidad)
-	{
+	{	
+		contador++;
 
-		contador++
-
-		peso=prompt("ingresar kg del contenedor nro "+contador);
-		while(peso<1)
+		peso=prompt("ingresar peso en Kg. del "+contador+"° contenedor");
+		while(!(peso>0))
 		{
-			peso=prompt("ingresar peso mayor a cero kg.");
+			peso=prompt("ingresar peso mayor a cero Kg.");
 		}
 		peso=Number(peso);
-
 
 
 		if(contador==1)
@@ -33,15 +34,13 @@
 				minimo=peso;
 			}
 
-
 			if(peso>maximo)
 			{
 				maximo=peso;
 			}
 		}
-	}
+	}	
 
-
-	alert("peso maximo= "+maximo+"\npeso minimo= "+minimo);
-
+	console.log("el menos pesado es de "+minimo+" kg.");
+	console.log("el mas pesado es de "+maximo+" kg.");
 }

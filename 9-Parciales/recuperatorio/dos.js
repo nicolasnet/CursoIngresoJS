@@ -1,13 +1,14 @@
 function Mostrar()
 {
-    var importe;
-    var descuento=0.75;
-    var importeFinal;
+  var importe;
+  var descuento=0.75;
+  var importeFinal;
 
-    importe=prompt("ingrese importe");
-    importe=parseInt(importe);
 
-    importeFinal=importe*descuento;
+  importe=prompt("ingresar importe");
+  importe=Number(importe);
 
-    document.getElementById('importeFinal').value=importeFinal;
+  importeFinal=importe*descuento;
+
+  document.getElementById('importeFinal').value=importeFinal;
 }
